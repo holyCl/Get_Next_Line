@@ -12,10 +12,6 @@ int		main(int argc, char **argv)
 	else
 		return (2);
 	gnl(fd, &line);
-	{
-		ft_putendl(line);
-		free(line);
-	}
 	if (argc == 2)
 		close(fd);
 }
