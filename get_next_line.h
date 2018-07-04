@@ -1,19 +1,27 @@
-#ifndef get_next_line
-# define get_next_line
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ivoloshi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/24 15:00:48 by ivoloshi          #+#    #+#             */
+/*   Updated: 2018/01/24 15:00:53 by ivoloshi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-# include <unistd.h>
-# include <stdlib.h>
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 100
+# include "libft/libft.h"
 # include <fcntl.h>
-# include <stdio.h>
 
-# define TRUE 1
-# define FALSE 0
-# define BUFFSIZE 32
+typedef	struct		s_gnl
+{
+	int				fd;
+	char			*str;
+}					t_gnl;
 
-# include "../libft/libft.h"
-
-
-int		gnl(int const fd, char **line);
-int		ft_strchrlen(const char *s, int c);
+int					get_next_line(const int fd, char **line);
 
 #endif

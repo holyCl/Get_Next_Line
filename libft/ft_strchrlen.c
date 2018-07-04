@@ -15,11 +15,11 @@
 int			ft_strchrlen(const char *s, int c)
 {
 	char	*str;
-	int 	i;
+	int		i;
 
 	i = 0;
 	str = (char *)s;
-	while (str[i] == c)
+	while (str[i] != c)
 	{
 		if (str[i] == '\0')
 			return (-1);
